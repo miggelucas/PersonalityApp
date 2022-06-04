@@ -16,15 +16,6 @@ struct TraitBrain{
         "Openness" : Trait(name: "Openness", median: 23.354704, std: 4.400262)
     ]
     
-    let traitIndex = ["Extrversion" : 0, "Stability" : 1, "Agreeableness" : 2, "Consciousness" : 3, "Openness" : 4 ]
-    
-    // estocar o escores do usuário em variáveis ou num dict?
-    var extroversionEscore : Int = 0
-    var stabilityEscore : Int = 0
-    var agreeablenessEscore : Int = 0
-    var consciousnessEscore : Int = 0
-    var openessEscore : Int = 0
-    
     mutating func updateUserEscore(UserScore score : Int, traitOfScore trait : String) {
         traits[trait]!.userEscore! += score
     }

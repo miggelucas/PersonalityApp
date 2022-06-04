@@ -23,11 +23,18 @@ class ViewController: UIViewController {
     var traitBrain = TraitBrain()
     var timer = Timer()
     
+
     @IBAction func answerPressed(_ sender: UIButton) {
         
-        
+        // por algum motivo do satanas o currentittle não funcionou
         //let userAnswer = sender.currentTitle!
-        //let valueUserAnswer = questionBrain.getValueFromAnswer(answer: userAnswer)
+        let userAnswer = sender.titleLabel!.text!
+
+        let valueUserAnswer = questionBrain.getValueFromAnswer(answer: userAnswer)
+        let questionTrait = questionBrain.getQuestionTrait()
+
+        traitBrain.updateUserEscore(UserScore: valueUserAnswer, traitOfScore: questionTrait)
+        
         sender.backgroundColor = UIColor.systemBlue
         
         questionBrain.nextQuestion()

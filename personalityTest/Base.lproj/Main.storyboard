@@ -33,7 +33,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Agree"/>
                                         <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qsv-Ua-UQZ"/>
+                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvd-MH-qk4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-0q-qvc">
@@ -44,7 +44,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Partially agree"/>
                                         <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jPU-Uv-bIm"/>
+                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycM-1K-iTN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asL-Kc-nin">
@@ -55,7 +55,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Neutral"/>
                                         <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXf-mc-S9W"/>
+                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSd-RS-OKK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqd-jQ-GQ8">
@@ -66,7 +66,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Partially disagree"/>
                                         <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lnv-ni-Wsj"/>
+                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgN-S8-DBk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAS-pH-PUw">
@@ -77,7 +77,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Disagree"/>
                                         <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AhB-9A-ThD"/>
+                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmJ-su-dFc"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rPu-fF-p5P">

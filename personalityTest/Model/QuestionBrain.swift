@@ -13,7 +13,7 @@ struct QuestionBrain{
     let questions = [
         Question(text: "I don't talk a lot.", trait: "Extroversion", isInverted: true),
         Question(text: "I start conversations.", trait: "Extroversion", isInverted: false),
-        Question(text: "I talk to a lot of different people at parties.", trait: "Extrversion", isInverted: false),
+        Question(text: "I talk to a lot of different people at parties.", trait: "Extroversion", isInverted: false),
         Question(text: "I don't like to draw attention to myself.", trait: "Extroversion", isInverted: false),
         Question(text: "I don't mind being the center of attention.", trait: "Extroversion", isInverted: true),
         Question(text: "I am quiet around strangers.", trait: "Extroversion", isInverted: true),
@@ -67,7 +67,7 @@ struct QuestionBrain{
     }
     
     func getValueFromAnswer(answer : String) -> Int {
-        let valueAnswer : Int
+        var valueAnswer : Int
         
         switch (answer) {
         case "Agree":
@@ -82,6 +82,10 @@ struct QuestionBrain{
             valueAnswer = 5
         default:
             valueAnswer = 0
+        }
+        
+        if checkIfQuestionIsInverted() {
+            valueAnswer = invertEscore(escoreToBeInverted: valueAnswer)
         }
         
         return valueAnswer
