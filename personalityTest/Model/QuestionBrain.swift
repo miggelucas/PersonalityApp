@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 struct QuestionBrain{
@@ -64,12 +65,42 @@ struct QuestionBrain{
     func getProgress() -> Float {
         return Float(currentQuestionIndex + 1) / Float(questions.count)
     }
+    
+    func getValueFromAnswer(answer : String) -> Int {
+        let valueAnswer : Int
+        
+        switch (answer) {
+        case "Agree":
+            valueAnswer = 1
+        case "Partially agree":
+            valueAnswer = 2
+        case "Neutral":
+            valueAnswer = 3
+        case "Partially disagree":
+            valueAnswer = 4
+        case "Disagree":
+            valueAnswer = 5
+        default:
+            valueAnswer = 0
+        }
+        
+        return valueAnswer
+    }
+    
+        
+    func invertEscore(escoreToBeInverted score : Int) -> Int {
+        return 6 - score
+    }
 
+    
     mutating func nextQuestion() {
         if currentQuestionIndex + 1 < questions.count {
             currentQuestionIndex += 1
             
         } else {
+            
+            // resetando o app por enquanto
+            // showResults()
             currentQuestionIndex = 0
             currentQuestionIndex = 0
         }

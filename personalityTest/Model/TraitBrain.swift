@@ -8,12 +8,12 @@
 import Foundation
 
 struct TraitBrain{
-    let traits = [
-        Trait(name: "Extroversion", median: 15.621093, std: 6.025811),
-        Trait(name: "Stability", median: 18.011059, std: 6.537830),
-        Trait(name: "Agreeableness", median: 21.053374, std: 5.702230),
-        Trait(name: "Consciousness", median: 17.713736, std: 5.291877),
-        Trait(name: "Openness", median: 23.354704, std: 4.400262),
+    var traits = [
+        "Extroversion" : Trait(name: "Extroversion", median: 15.621093, std: 6.025811),
+        "Stability" : Trait(name: "Stability", median: 18.011059, std: 6.537830),
+        "Agreeableness" : Trait(name: "Agreeableness", median: 21.053374, std: 5.702230),
+        "Consciousness" : Trait(name: "Consciousness", median: 17.713736, std: 5.291877),
+        "Openness" : Trait(name: "Openness", median: 23.354704, std: 4.400262)
     ]
     
     let traitIndex = ["Extrversion" : 0, "Stability" : 1, "Agreeableness" : 2, "Consciousness" : 3, "Openness" : 4 ]
@@ -25,11 +25,14 @@ struct TraitBrain{
     var consciousnessEscore : Int = 0
     var openessEscore : Int = 0
     
-    func getScoreZ(userEscore escore : Int, traitEscore trait : String) -> Float {
-        let indexOfTrait = traitIndex[trait]
-        let trait = traits[indexOfTrait!]
+    mutating func updateUserEscore(UserScore score : Int, traitOfScore trait : String) {
+        traits[trait]!.userEscore! += score
+    }
+    
+    func getScoreZ( traitEscore trait : String) -> Float {
+        let trait = traits[trait]!
 
-        let userEscoreFloat = Float(escore)
+        let userEscoreFloat = Float(trait.userEscore!)
         let medianTrait = trait.median
         let stdTrait = trait.std
         
