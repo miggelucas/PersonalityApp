@@ -7,6 +7,10 @@
 
 import UIKit
 
+
+// swipe mudar o a tela
+// registrar mudanca de estado dos butões
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
@@ -17,13 +21,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var neutralButton: UIButton!
     @IBOutlet weak var partDisagreeButton: UIButton!
     @IBOutlet weak var disagreeButton: UIButton!
-    
-    
+        
     var questionBrain = QuestionBrain()
     var traitBrain = TraitBrain()
     var timer = Timer()
     
-
     @IBAction func answerPressed(_ sender: UIButton) {
         
         // por algum motivo do satanas o currentittle não funcionou

@@ -11,10 +11,12 @@ struct Question {
     var text : String
     var trait : String
     var isInverted : Bool
+    var loading : Double
     
-    init(text : String, trait : String, isInverted : Bool){
+    init(text : String, trait : String, isInverted : Bool, loading = Double){
         self.text = text
         self.trait = trait
         self.isInverted = isInverted
+        self.loading = loading
     }
 }
